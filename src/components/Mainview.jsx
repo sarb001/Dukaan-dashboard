@@ -1,7 +1,18 @@
-import { Downloadimg, Dropdownimg, Greensuccessimg, Magnifyglassicon, Processingimg, Questionimg, TwosidedArrowimg, Whitequestionlogo } from "./Images/AllImages"
+import { Downloadimg,  Greensuccessimg, Magnifyglassicon, Processingimg, Questionimg, TwosidedArrowimg } from "./Images/AllImages"
 import { IoIosArrowForward } from "react-icons/io";
 
 export const Mainview = () => {
+
+    const TableData = [
+    { Ordervalue : "#281209" ,status : 'Successful', transid : "13163445747", rfdate : "Today,08:45 PM", Orderamount : "1125.00" },
+    { Ordervalue : "#281209" ,status : 'Processing', transid : "13163445747", rfdate : "Yesterday,3:00 PM", Orderamount : "1125.00" },
+    { Ordervalue : "#281209" , status : 'Successful', transid : "13163445747", rfdate : "11 Jul 2023,03:00 PM", Orderamount : "1125.00" },
+    { Ordervalue : "#281209" ,status : 'Successful', transid : "13163445747", rfdate : "12 Jul 2023,04:00 AM", Orderamount : "1125.00" },
+    { Ordervalue : "#281209" ,status : 'Successful', transid : "13163445747", rfdate : "12 Jul 2023,04:00 AM", Orderamount : "1125.00" },
+    { Ordervalue : "#281209" ,status : 'Successful', transid : "13163445747", rfdate : "12 Jul 2023,05:00 AM", Orderamount : "1125.00" },
+    { Ordervalue : "#281209" ,status : 'Processing', transid : "13163445747", rfdate : "13 Jul 2023,03:00 PM", Orderamount : "1125.00" },
+    { Ordervalue : "#281209" ,status : 'Successful', transid : "13163445747", rfdate : "12 Jul 2023,05:00 PM", Orderamount : "1125.00" },
+        ]
     return (
         <div className="pt-3 pl-8 pr-8 pb-2 flex flex-col gap-4 bg-slate-100 ">
 
@@ -60,9 +71,9 @@ export const Mainview = () => {
                         </thead>
                 
                         <tbody>
-                            {TableData?.map(i => {
+                            {TableData?.map((i,index) => {
                                         return (
-                                            <tr className="grid grid-cols-5">
+                                            <tr key = {index} className="grid grid-cols-5">
                                                 <td className="p-[14px] flex justify-center"> {i?.Ordervalue} </td>
                                                 <td className="p-[14px] flex  justify-center items-center gap-2"> 
                                                     <div>
@@ -89,27 +100,14 @@ export const Mainview = () => {
     )
 }
 
-export const TableData = [
-    { Ordervalue : "#281209" ,status : 'Successful', transid : "13163445747", rfdate : "Today,08:45 PM", Orderamount : "1125.00" },
-    { Ordervalue : "#281209" ,status : 'Processing', transid : "13163445747", rfdate : "Yesterday,3:00 PM", Orderamount : "1125.00" },
-    { Ordervalue : "#281209" , status : 'Successful', transid : "13163445747", rfdate : "11 Jul 2023,03:00 PM", Orderamount : "1125.00" },
-    { Ordervalue : "#281209" ,status : 'Successful', transid : "13163445747", rfdate : "12 Jul 2023,04:00 AM", Orderamount : "1125.00" },
-    { Ordervalue : "#281209" ,status : 'Successful', transid : "13163445747", rfdate : "12 Jul 2023,04:00 AM", Orderamount : "1125.00" },
-    { Ordervalue : "#281209" ,status : 'Successful', transid : "13163445747", rfdate : "12 Jul 2023,05:00 AM", Orderamount : "1125.00" },
-    { Ordervalue : "#281209" ,status : 'Processing', transid : "13163445747", rfdate : "13 Jul 2023,03:00 PM", Orderamount : "1125.00" },
-    { Ordervalue : "#281209" ,status : 'Successful', transid : "13163445747", rfdate : "12 Jul 2023,05:00 PM", Orderamount : "1125.00" },
-]
+export const CardsLayout = () => {
 
-
-
-export const CardsData = [
+   const CardsData = [
     { text: "Next Payout",price  : "₹2,312.23" , orderscount : '23 orders' ,payoutdate : 'Next payout date:' , date : 'Today.04:00 PM' , bgcolor : 'bg-[#146EB4]' , color : 'text-white' },
     { text: "Amount Pending",price  : "₹92,312.20" , orderscount : '13 orders' , borderbottom : 'border-black' },
     { text: "Amount Processed" ,price  : "₹23,92,312.19" },
-] 
+   ] 
 
-
-export const CardsLayout = () => {
     return (
         <>
         

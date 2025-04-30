@@ -1,4 +1,4 @@
-import { Dropdownimg, Magnifyglassicon, Questionimg, RoundedDropdown, SpeakerIcon } from "./Images/AllImages"
+import {  Magnifyglassicon, Questionimg, RoundedDropdown, SpeakerIcon } from "./Images/AllImages"
 
 export const Header = () => {
     return (
